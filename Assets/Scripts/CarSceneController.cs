@@ -30,4 +30,9 @@ public class CarSceneController : MonoBehaviour
         }
         yield return null;
     }
+
+    public void LevelDone()
+    {
+        gameInProgress = false;
+    }
 }

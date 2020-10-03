@@ -7,6 +7,7 @@ public class FillBar : MonoBehaviour
 {
     public Slider progressBar;
     public float speedOfBar;
+    public CarSceneController controller;
 
     private float currentValue = 0f;
     public float CurrentValue
@@ -27,5 +28,10 @@ public class FillBar : MonoBehaviour
     private void Update()
     {
         CurrentValue += speedOfBar;
+        if(currentValue >= 1f)
+        {
+            controller.LevelDone();
+        }
+
     }
 }
