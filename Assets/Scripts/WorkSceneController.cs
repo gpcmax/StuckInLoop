@@ -12,6 +12,8 @@ public class WorkSceneController : MonoBehaviour
     public int currentPoints = 0;
     public int requiredPoints = 10;
 
+    public GameData gameData;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,7 @@ public class WorkSceneController : MonoBehaviour
     {
         //load next scene
         StopAllCoroutines();
+        gameData.ChangeScene();
     }
 
     IEnumerator SpawnQTEs()

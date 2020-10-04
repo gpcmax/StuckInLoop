@@ -11,6 +11,7 @@ public class CarSceneController : MonoBehaviour
     public GameObject[] cars;
 
     public float waitTime = 1f;
+    public GameData gameData;
 
     // Start is called before the first frame update
     void Start()
@@ -34,5 +35,6 @@ public class CarSceneController : MonoBehaviour
     public void LevelDone()
     {
         gameInProgress = false;
+        gameData.ChangeScene();
     }
 }
