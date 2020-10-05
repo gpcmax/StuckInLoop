@@ -22,9 +22,9 @@ public class GameData : ScriptableObject
         if(currentScene > Scenes.Length)
         {
             currentScene = 0;
+            Day++;
         }
         //Debug.Log(Scenes[currentScene]);
-        Day++;
         SceneManager.LoadScene(Scenes[currentScene]);
     }
 }
