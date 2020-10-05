@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CarSceneController : MonoBehaviour
 {
@@ -12,12 +13,21 @@ public class CarSceneController : MonoBehaviour
 
     public float waitTime = 1f;
     public GameData gameData;
+    
+    public TextMeshProUGUI dayText;
+    const string day = "Day: ";
+
+    private void Awake()
+    {
+        dayText.text = day + gameData.Day;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         gameInProgress = true;
-        StartCoroutine("SpawnCars");
+        StartCoroutine("startLevel");
+        //StartCoroutine("SpawnCars");
     }
 
     IEnumerator SpawnCars()
@@ -30,6 +40,12 @@ public class CarSceneController : MonoBehaviour
             yield return new WaitForSeconds(waitTime);
         }
         yield return null;
+    }
+
+    IEnumerator startLevel()
+    {
+        yield return new WaitForSeconds(3f);
+        StartCoroutine("SpawnCars");
     }
 
     public void LevelDone()

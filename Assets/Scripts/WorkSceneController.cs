@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WorkSceneController : MonoBehaviour
 {
@@ -13,18 +14,25 @@ public class WorkSceneController : MonoBehaviour
     public int requiredPoints = 10;
 
     public GameData gameData;
+    public TextMeshProUGUI dayText;
+    const string day = "Day: ";
+
+    private void Awake()
+    {
+        dayText.text = day + gameData.Day;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         gameInProgress = true;
-        StartCoroutine("SpawnQTEs");
+        StartCoroutine("StartLevel");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(currentPoints >= requiredPoints)
+        if (currentPoints >= requiredPoints)
         {
             EndGame();
         }
@@ -48,9 +56,15 @@ public class WorkSceneController : MonoBehaviour
         {
             int RandSpawn = Random.Range(0, spawnPoints.Length - 1);
             int RandQTE = Random.Range(0, QTEs.Length);
-            Instantiate(QTEs[RandQTE], spawnPoints[RandSpawn].position, Quaternion.identity,spawnPoints[RandSpawn]);
+            Instantiate(QTEs[RandQTE], spawnPoints[RandSpawn].position, Quaternion.identity, spawnPoints[RandSpawn]);
             yield return new WaitForSeconds(waitTime);
         }
         yield return null;
+    }
+
+    IEnumerator StartLevel()
+    {
+        yield return new WaitForSeconds(4f);
+        StartCoroutine("SpawnQTEs");
     }
 }

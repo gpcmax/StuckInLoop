@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class HouseController : MonoBehaviour
 {
@@ -10,9 +11,13 @@ public class HouseController : MonoBehaviour
 
     public GameObject interactionKey;
 
+    public TextMeshProUGUI dayText;
+    const string day = "Day: ";
+
     private void Awake()
     {
-        gameData.reset();    
+        gameData.reset();
+        dayText.text = day + gameData.Day;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

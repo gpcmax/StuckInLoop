@@ -9,6 +9,8 @@ public class FillBar : MonoBehaviour
     public float speedOfBar;
     public CarSceneController controller;
 
+    public bool startFilling = false;
+
     private float currentValue = 0f;
     public float CurrentValue
     {
@@ -23,15 +25,25 @@ public class FillBar : MonoBehaviour
     private void Start()
     {
         CurrentValue = 0f;
+        StartCoroutine("WaitFor");
     }
 
     private void Update()
     {
-        CurrentValue += speedOfBar;
-        if(currentValue >= 1f)
+        if (startFilling)
         {
-            controller.LevelDone();
+            CurrentValue += speedOfBar;
+            if (currentValue >= 1f)
+            {
+                controller.LevelDone();
+            }
         }
-
     }
+
+    IEnumerator WaitFor()
+    {
+        yield return new WaitForSeconds(4f);
+        startFilling = true;
+    }
+
 }

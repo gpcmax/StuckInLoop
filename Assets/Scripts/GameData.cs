@@ -17,13 +17,13 @@ public class GameData : ScriptableObject
 
     public void ChangeScene()
     {
-        Debug.Log(Scenes[currentScene]);
+        //Debug.Log(Scenes[currentScene]);
         currentScene++;
         if(currentScene > Scenes.Length)
         {
             currentScene = 0;
         }
-        Debug.Log(Scenes[currentScene]);
+        //Debug.Log(Scenes[currentScene]);
         Day++;
         SceneManager.LoadScene(Scenes[currentScene]);
     }

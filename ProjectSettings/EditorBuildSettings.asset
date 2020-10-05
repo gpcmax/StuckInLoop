@@ -9,12 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/BedroomScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/DrivingTOHome.unity
-    guid: e2cdb6467ce0cf04b83cc790bac29481
-  - enabled: 1
     path: Assets/Scenes/DrivingToWork.unity
     guid: 2f1946769ef83224684ff99e89fb8ca0
   - enabled: 1
     path: Assets/Scenes/WorkingInOffice.unity
     guid: 33550d3278eb33f4b9ddfb358f089036
+  - enabled: 1
+    path: Assets/Scenes/DrivingTOHome.unity
+    guid: e2cdb6467ce0cf04b83cc790bac29481
+  - enabled: 1
+    path: Assets/Scenes/NightTimeScene.unity
+    guid: 0f861fb8115e5e249ad18e30189f88f8
   m_configObjects: {}

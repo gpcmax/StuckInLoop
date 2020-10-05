@@ -18,5 +18,5 @@ MonoBehaviour:
   - DrivingToWork
   - WorkingInOffice
   - DrivingTOHome
-  - BedroomScene
+  - NightTimeScene
   currentScene: 0
