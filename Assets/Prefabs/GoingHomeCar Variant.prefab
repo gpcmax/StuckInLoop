@@ -70,7 +70,12 @@ PrefabInstance:
     - target: {fileID: 6422383673874903239, guid: a5aa7a25f903c1e42ab3f299aafe7392,
         type: 3}
       propertyPath: m_Name
-      value: GoingHomeCar
+      value: GoingHomeCar Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521117276915807688, guid: a5aa7a25f903c1e42ab3f299aafe7392,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5aa7a25f903c1e42ab3f299aafe7392, type: 3}
