@@ -1264,7 +1264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueParent: {fileID: 1397998487}
-  currentChoice: {fileID: 11400000, guid: 83a3867b8c9b8184a8e1692e97ed2aef, type: 2}
+  currentChoice: {fileID: 11400000, guid: ba45428f6e34e6d4788258e0d47cbde1, type: 2}
   nameBox: {fileID: 1058622657}
   textBox: {fileID: 2002030950}
   autoStart: 0
@@ -1275,6 +1275,10 @@ MonoBehaviour:
   choice: {fileID: 210856979}
   choiceOneText: {fileID: 1338578896}
   choiceTwoText: {fileID: 759873840}
+  gameData: {fileID: 11400000, guid: 8a88f3c1f2eaa1048990dc16f54daf5a, type: 2}
+  choicesBaseOnDays:
+  - {fileID: 11400000, guid: ba45428f6e34e6d4788258e0d47cbde1, type: 2}
+  - {fileID: 11400000, guid: 83a3867b8c9b8184a8e1692e97ed2aef, type: 2}
 --- !u!82 &557492447
 AudioSource:
   m_ObjectHideFlags: 0

@@ -10,10 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67c820c9f567d9f43ab190cc1cf74d64, type: 3}
-  m_Name: DeafultChoice
+  m_Name: Day_1_Evening_Choice1
   m_EditorClassIdentifier: 
   currentChoiceFile: {fileID: 0}
-  currentChoice: This is a test
+  currentChoice: 'I am glad to hear.
+
+    You worked hard today.
+
+    You should
+    sleep another big day tomorrow.'
   charName: You are chatting with "Unknown"
   isChoice: 0
   choiceOneName: 

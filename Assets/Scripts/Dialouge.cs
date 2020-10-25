@@ -34,13 +34,23 @@ public class Dialouge : MonoBehaviour
     public TextMeshProUGUI choiceOneText;
     public TextMeshProUGUI choiceTwoText;
 
+    public GameData gameData;
+    public popup[] choicesBaseOnDays;
+
 
     // Start is called before the first frame update
     private void Awake()
     {
         if(autoStart)
         {
-            startConvo(currentChoice);
+            if (gameData.Day <= choicesBaseOnDays.Length)
+            {
+                startConvo(choicesBaseOnDays[gameData.Day]);
+            }
+            else
+            {
+                startConvo(choicesBaseOnDays[Random.Range(0,choicesBaseOnDays.Length)]);
+            }
         }
         //sentances = currentTextFile.text.Split('\n');
         //sentances = currentChoice.currentChoice.text.Split('\n');

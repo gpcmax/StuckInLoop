@@ -6,6 +6,7 @@ using UnityEngine;
 public class popup : ScriptableObject
 {
     public TextAsset currentChoiceFile;
+    [Multiline(10)]
     public string currentChoice;
     public string charName = string.Empty;
     public bool isChoice;
