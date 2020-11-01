@@ -45,7 +45,7 @@ public class Dialouge : MonoBehaviour
         {
             if (gameData.Day <= choicesBaseOnDays.Length)
             {
-                startConvo(choicesBaseOnDays[gameData.Day]);
+                startConvo(choicesBaseOnDays[gameData.Day -1]);
             }
             else
             {
@@ -64,6 +64,10 @@ public class Dialouge : MonoBehaviour
             if(currentSentance != textBox.text)
             {
                 fillText = true;
+            }
+            else
+            {
+                Continue();
             }
         }
     }

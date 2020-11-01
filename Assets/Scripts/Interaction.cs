@@ -8,10 +8,11 @@ public class Interaction : MonoBehaviour
     public GameObject objectToSetActive;
     private bool isInTrigger;
     public HouseController controller;
+    public KeyCode interactKey;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isInTrigger)
+        if (Input.GetKeyDown(interactKey) && isInTrigger)
         {
             objectToSetActive.SetActive(true);
             controller.TalkedOnPC = true;

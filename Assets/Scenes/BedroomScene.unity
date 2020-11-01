@@ -711,7 +711,7 @@ MonoBehaviour:
         m_MethodName: startConvo
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 83a3867b8c9b8184a8e1692e97ed2aef,
+          m_ObjectArgument: {fileID: 11400000, guid: ba45428f6e34e6d4788258e0d47cbde1,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: popup, Assembly-CSharp
           m_IntArgument: 0
@@ -3538,6 +3538,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Overlay
       objectReference: {fileID: 0}
+    - target: {fileID: 4227707958607030458, guid: 54a9f2bf49b912e4f9b070d1bdb6fbd2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4227707958607030459, guid: 54a9f2bf49b912e4f9b070d1bdb6fbd2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4317,6 +4322,7 @@ MonoBehaviour:
   interactionButton: {fileID: 553191845}
   objectToSetActive: {fileID: 557492443}
   controller: {fileID: 857074123}
+  interactKey: 101
 --- !u!61 &1579684629
 BoxCollider2D:
   m_ObjectHideFlags: 0
