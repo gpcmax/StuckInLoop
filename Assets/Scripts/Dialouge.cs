@@ -84,6 +84,18 @@ public class Dialouge : MonoBehaviour
         StartCoroutine("Type");
     }
 
+    public void startConvoBaseOnDay()
+    {
+        if (gameData.Day <= choicesBaseOnDays.Length)
+        {
+            startConvo(choicesBaseOnDays[gameData.Day - 1]);
+        }
+        else
+        {
+            startConvo(choicesBaseOnDays[Random.Range(0, choicesBaseOnDays.Length)]);
+        }
+    }
+
     public void stopConvo()
     {
         StopCoroutine("Type");

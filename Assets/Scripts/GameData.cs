@@ -12,15 +12,18 @@ public class GameData : ScriptableObject
 
     public void reset()
     {
+        Debug.Log("Something triggered a reset");
         currentScene = 0;
     }
 
     public void ChangeScene()
     {
-        //Debug.Log(Scenes[currentScene]);
         currentScene++;
-        if(currentScene > Scenes.Length)
+        //Debug.Log(Scenes[currentScene]);
+        Debug.Log("Current Scene: " + currentScene);
+        if(currentScene >= Scenes.Length)
         {
+            Debug.Log("Scene Was Reset");
             currentScene = 0;
             Day++;
         }

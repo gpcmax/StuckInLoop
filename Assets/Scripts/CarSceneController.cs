@@ -16,10 +16,12 @@ public class CarSceneController : MonoBehaviour
     
     public TextMeshProUGUI dayText;
     const string day = "Day: ";
+    bool changingLevel = false;
 
     private void Awake()
     {
         dayText.text = day + gameData.Day;
+        changingLevel = false;
     }
 
     // Start is called before the first frame update
@@ -50,7 +52,11 @@ public class CarSceneController : MonoBehaviour
 
     public void LevelDone()
     {
-        gameInProgress = false;
-        gameData.ChangeScene();
+        if(!changingLevel)
+        {
+            changingLevel = true;
+            gameInProgress = false;
+            gameData.ChangeScene();
+        }
     }
 }
