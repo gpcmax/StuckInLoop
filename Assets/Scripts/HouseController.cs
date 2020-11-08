@@ -13,10 +13,15 @@ public class HouseController : MonoBehaviour
 
     public TextMeshProUGUI dayText;
     const string day = "Day: ";
+    public KeyCode interactKey;
+    public bool morningHome;
 
     private void Awake()
     {
-        gameData.reset();
+        if(morningHome)
+        {
+            gameData.reset();
+        }
         dayText.text = day + gameData.Day;
     }
 
@@ -42,7 +47,7 @@ public class HouseController : MonoBehaviour
     {
         if(TalkedOnPC && inCollision)
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if(Input.GetKeyDown(interactKey))
             {
                 ChangeLevel();
             }

@@ -708,12 +708,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 557492446}
-        m_MethodName: startConvo
-        m_Mode: 2
+        m_MethodName: startConvoBaseOnDay
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: ba45428f6e34e6d4788258e0d47cbde1,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: popup, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2114,6 +2113,7 @@ MonoBehaviour:
   inCollision: 0
   interactionKey: {fileID: 1358416676}
   dayText: {fileID: 1370106055}
+  interactKey: 101
 --- !u!4 &857074124
 Transform:
   m_ObjectHideFlags: 0
@@ -2920,7 +2920,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1159345429}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 557492443}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1159345429
 MonoBehaviour:
   m_ObjectHideFlags: 0
