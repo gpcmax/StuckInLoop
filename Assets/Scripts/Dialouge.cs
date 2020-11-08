@@ -37,20 +37,31 @@ public class Dialouge : MonoBehaviour
     public GameData gameData;
     public popup[] choicesBaseOnDays;
 
+    //textMesseging
+    public GameObject msgHolder;
+    public GameObject textMsg;
+    public TextMeshProUGUI currentTextBox;
+    public bool textMsgEnabled;
 
     // Start is called before the first frame update
     private void Awake()
     {
-        if(autoStart)
+        if (autoStart && !textMsgEnabled)
         {
             if (gameData.Day <= choicesBaseOnDays.Length)
             {
-                startConvo(choicesBaseOnDays[gameData.Day -1]);
+                startConvo(choicesBaseOnDays[gameData.Day - 1]);
             }
             else
             {
-                startConvo(choicesBaseOnDays[Random.Range(0,choicesBaseOnDays.Length)]);
+                startConvo(choicesBaseOnDays[Random.Range(0, choicesBaseOnDays.Length)]);
             }
+        }
+        else if(textMsgEnabled)
+        {
+            sentances = HandleText();
+            SpawsnNewTextBox();
+            isTalking = true;
         }
         //sentances = currentTextFile.text.Split('\n');
         //sentances = currentChoice.currentChoice.text.Split('\n');
@@ -59,15 +70,29 @@ public class Dialouge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1") && isTalking) //Input.GetButtonDown("Interact") ||  || Input.GetTouch(0).phase == TouchPhase.Began
+        if (Input.GetButtonDown("Fire1") && isTalking) //Input.GetButtonDown("Interact") ||  || Input.GetTouch(0).phase == TouchPhase.Began
         {
-            if(currentSentance != textBox.text)
+            if (!textMsgEnabled)
             {
-                fillText = true;
+                if (currentSentance != textBox.text)
+                {
+                    fillText = true;
+                }
+                else
+                {
+                    Continue();
+                }
             }
             else
             {
-                Continue();
+                if (currentSentance != currentTextBox.text)
+                {
+                    fillText = true;
+                }
+                else
+                {
+                    ContinueText();
+                }
             }
         }
     }
@@ -82,6 +107,14 @@ public class Dialouge : MonoBehaviour
         nameBox.text = charName;
         isTalking = true;
         StartCoroutine("Type");
+    }
+
+    public void SpawsnNewTextBox()
+    {
+        GameObject currentMsg = Instantiate(textMsg, msgHolder.transform);
+        currentTextBox = currentMsg.GetComponentInChildren<TextMeshProUGUI>();
+        currentTextBox.text = string.Empty;
+        StartCoroutine("TypeMessage");
     }
 
     public void startConvoBaseOnDay()
@@ -113,9 +146,9 @@ public class Dialouge : MonoBehaviour
     IEnumerator Type()
     {
         currentSentance = sentances[index];
-        foreach(char letter in currentSentance.ToCharArray())
+        foreach (char letter in currentSentance.ToCharArray())
         {
-            if(fillText)
+            if (fillText)
             {
                 textBox.text = currentSentance;
                 fillText = false;
@@ -130,9 +163,29 @@ public class Dialouge : MonoBehaviour
         }
     }
 
+    IEnumerator TypeMessage()
+    {
+        currentSentance = sentances[index];
+        foreach (char letter in currentSentance.ToCharArray())
+        {
+            if (fillText)
+            {
+                currentTextBox.text = currentSentance;
+                fillText = false;
+                break;
+            }
+            else
+            {
+                currentTextBox.text += letter;
+                audioSource.Play();
+                yield return new WaitForSeconds(textSpeed);
+            }
+        }
+    }
+
     public void Continue()
     {
-        if(index < sentances.Length - 1)
+        if (index < sentances.Length - 1)
         {
             index++;
             StopCoroutine("Type");
@@ -140,7 +193,7 @@ public class Dialouge : MonoBehaviour
             textBox.text = "";
             StartCoroutine("Type");
         }
-        else if(currentChoice.isChoice)
+        else if (currentChoice.isChoice)
         {
             choice.SetActive(true);
             choiceOneText.text = currentChoice.choiceOneName;
@@ -151,6 +204,21 @@ public class Dialouge : MonoBehaviour
             index = 0;
             textBox.text = "";
             stopConvo();
+        }
+    }
+
+    public void ContinueText()
+    {
+        if (index < sentances.Length - 1)
+        {
+            index++;
+            SpawsnNewTextBox();
+        }
+        else if (currentChoice.isChoice)
+        {
+            choice.SetActive(true);
+            choiceOneText.text = currentChoice.choiceOneName;
+            choiceTwoText.text = currentChoice.choiceTwoName;
         }
     }
 
