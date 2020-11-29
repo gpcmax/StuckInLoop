@@ -8,6 +8,39 @@ Alex is the AI name
 Artifical Language Expertmential Experiecnce 
 
 Day 1: Good morning!
+Welcome to your new computer.
+I am your Artifical Intelligence Domenstic Assitance or Aida for short.
+It is the start of your new job, you better hurry to work before you are late.
+
+Day 1: end of day
+Welcome back, I hope your work day was good.
+Choice 1A: It went well.
+Aida: I am glad to hear that. 
+Player: do you have emotions?
+Aida: No silly i am an AI, i dont have feelings
+Choice 2: Oh okay, well night.
+Aida: Get some sleep, tomorrow is another big day.
+
+Choice 1B: it was really boring.
+Aida: That is not good. I am sorry to hear that.
+Player: do you have emotions?
+Aida: No silly i am an AI, i dont have feelings
+Choice 2A: Oh okay, well night.
+Aida: Get some sleep, tomorrow is another big day.
+
+Choice 2B: Huh strage it really seems like you have emotions
+Aida: That is just my programing to make me feel more relatable.
+Player: I guess that makes sense. 
+Aida: You should be going to bed soon, you have work tomorrow.
+
+(Day 2 is repeatable)
+Day 2: morning
+Aida: Good morning!
+Player: Morning.
+Aida: Its time to start the new day. I will talk to you after work.
+
+Day 2 night
+Aida: Welcome back. I bet you had a long day. you should head to bed right away.
 
 Day 5 is when things start to seem strange
 
