@@ -235,6 +235,8 @@ public class Dialouge : MonoBehaviour
         choice.SetActive(false);
         currentChoice = currentChoice.choiceOne;
         sentances = HandleText();
+        index = 0;
+        textBox.text = "";
         startConvo(currentChoice);
     }
 
@@ -242,7 +244,9 @@ public class Dialouge : MonoBehaviour
     {
         currentChoice = currentChoice.choiceTwo;
         choice.SetActive(false);
-        sentances = HandleText();
+        sentances = HandleText(); 
+        index = 0;
+        textBox.text = "";
         startConvo(currentChoice);
     }
 

@@ -42,6 +42,26 @@ Aida: Its time to start the new day. I will talk to you after work.
 Day 2 night
 Aida: Welcome back. I bet you had a long day. you should head to bed right away.
 
+(Day 3 is repeatable)
+Day 3 Morning: 
+Aida: Good morning.
+Aida: Dont forget to get breakfast before the day.
+Aida: Breakfast is an important part of the day.
+Player: Yea yea i got it.
+Aida: Have a good day and be safe on your drive.
+
+Day 3 Night:
+Aida: Welcome home!
+Aida: I am glad to see you get home safely.
+Player: it was just another day like any other.
+Aida: Whats wrong with that?
+Player: Nothing i guess.
+Aida: Good, make sure to get a good nights sleep.
+
+(Day 4 is repeatable)
+Day 4 Morning:
+Aida: 
+
 Day 5 is when things start to seem strange
 
 day 7 you find out things might not be what they seem
