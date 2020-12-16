@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Day_1_EveningTalk
   m_EditorClassIdentifier: 
   currentChoiceFile: {fileID: 0}
-  currentChoice: 'Welcome back from work
+  currentChoice: 'Aida:Welcome back from work
 
-    How was your day?'
+    Aida:How was your day?'
   charName: You are chatting with "Unknown"
   isChoice: 1
   choiceOneName: It was good

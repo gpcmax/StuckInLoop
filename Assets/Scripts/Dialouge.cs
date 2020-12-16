@@ -43,6 +43,9 @@ public class Dialouge : MonoBehaviour
     public TextMeshProUGUI currentTextBox;
     public bool textMsgEnabled;
 
+    public List<string> characterNames = new List<string>();
+    public List<string> sentancesWONames = new List<string>();
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -100,11 +103,12 @@ public class Dialouge : MonoBehaviour
     public void startConvo(popup Talking)
     {
         dialogueParent.SetActive(true);
-        charName = Talking.charName;
         currentChoice = Talking;
         sentances = HandleText();
+        sentancesWONames = HandleSentences();
+        characterNames = HandleNames();
         textBox.text = "";
-        nameBox.text = charName;
+        nameBox.text = characterNames[index];
         isTalking = true;
         StartCoroutine("Type");
     }
@@ -145,7 +149,8 @@ public class Dialouge : MonoBehaviour
 
     IEnumerator Type()
     {
-        currentSentance = sentances[index];
+        currentSentance = sentancesWONames[index];
+        nameBox.text = characterNames[index];
         foreach (char letter in currentSentance.ToCharArray())
         {
             if (fillText)
@@ -165,7 +170,8 @@ public class Dialouge : MonoBehaviour
 
     IEnumerator TypeMessage()
     {
-        currentSentance = sentances[index];
+        currentSentance = sentancesWONames[index];
+        nameBox.text = characterNames[index];
         foreach (char letter in currentSentance.ToCharArray())
         {
             if (fillText)
@@ -185,7 +191,7 @@ public class Dialouge : MonoBehaviour
 
     public void Continue()
     {
-        if (index < sentances.Length - 1)
+        if (index < sentancesWONames.Count - 1)
         {
             index++;
             StopCoroutine("Type");
@@ -209,7 +215,7 @@ public class Dialouge : MonoBehaviour
 
     public void ContinueText()
     {
-        if (index < sentances.Length - 1)
+        if (index < sentancesWONames.Count - 1)
         {
             index++;
             SpawsnNewTextBox();
@@ -260,5 +266,28 @@ public class Dialouge : MonoBehaviour
         {
             return currentChoice.currentChoice.Split('\n');
         }
+    }
+
+    private List<string> HandleNames()
+    {
+        List<string> names = new List<string>();
+        for(int i =0; i< sentances.Length;i++)
+        {
+            int charLocation = sentances[i].IndexOf(':');
+            if (charLocation> 0)
+            {
+                names.Add(sentances[i].Substring(0, charLocation));
+            }
+        }
+        return names;
+    }
+    private List<string> HandleSentences()
+    {
+        List<string> sentancesWithOutNames = new List<string>();
+        for(int i = 0; i < sentances.Length;i++)
+        {
+            sentancesWithOutNames.Add(sentances[i].Split(':').Last());
+        }
+        return sentancesWithOutNames;
     }
 }

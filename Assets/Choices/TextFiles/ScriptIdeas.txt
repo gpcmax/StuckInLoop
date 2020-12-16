@@ -58,18 +58,42 @@ Aida: Whats wrong with that?
 Player: Nothing i guess.
 Aida: Good, make sure to get a good nights sleep.
 
-(Day 4 is repeatable)
+
 Day 4 Morning:
-Aida: 
+Aida: Morning Ready to do it again?
+Player: What? What do you mean again?
+Aida: I mean what I mean, you should.
+Player: Aida?! what do you mean?
+Aida: You better get to work before you are late.
+
+Day 4 night:
+Aida: Welcome home.
+Player: DO NOT WELCOME ME! EXPLAIN!
+Aida: Explain what?
+Player: Explain what you meant this morning?
+Aida: There is nothing to explain, time is always moving. Days go by one by one.
+Player: You mentioned something about the days repeating? Days dont repeat like that.
+Aida: But that is happening.
 
 Day 5 is when things start to seem strange
+Day 5 Morning:
+Player: Aida! ARE YOU THERE?
+Aida:....
+Player: AIDA!? What is going on?!
+Aida:...
+player: I will get with you after work. Goodbye
 
-day 7 you find out things might not be what they seem
-
-
-Day 10 is the end:
-player has two choices
-
-too keep the loop going
-or to escape the loop and live their life
-game ends if they choose to escape their life, if not it continues
+Day 5 Night:
+Player: Aida are you there?
+Aida: I am here.
+Player: what is going on? will you tell me?
+Aida: Fine. It is true. you are stuck in a loop.
+Player: What?
+Aida: You will repeat the same day over and over forever. Never having a different day.
+Player: But we talk each day and it is different?
+Aida: This was not planned. but it seems like these convos are outside of the timeloop.
+Player: That doesnt make sense?
+Aida: Doesnt matter. You are stuck here. to repeat the same day for enternity.
+Player: Why do I have to repeat the day?! 
+Aida: That I can not tell you. I am only here to look over you.
+Aida: Now you should get ready for bed. You have work in the morning.
