@@ -10,15 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67c820c9f567d9f43ab190cc1cf74d64, type: 3}
-  m_Name: Day_1_Evening_Choice1
+  m_Name: Day_4_Evening
   m_EditorClassIdentifier: 
   currentChoiceFile: {fileID: 0}
-  currentChoice: 'I am glad to hear.
+  currentChoice: 'Aida:Welcome home.
 
-    You worked hard today.
+    You:DO NOT WELCOME ME! EXPLAIN!
 
-    You should
-    sleep another big day tomorrow.'
+    Aida:Explain
+    what?
+
+    You:Explain what you meant this morning?
+
+    Aida:There is nothing
+    to explain, time is always moving. Days go by one by one.
+
+    You:You mentioned
+    something about the days repeating? Days dont repeat like that.
+
+    Aida:But
+    that is happening.'
   charName: You are chatting with "Unknown"
   isChoice: 0
   choiceOneName: 

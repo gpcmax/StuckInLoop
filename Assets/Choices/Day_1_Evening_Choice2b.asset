@@ -10,18 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67c820c9f567d9f43ab190cc1cf74d64, type: 3}
-  m_Name: Day_2_Morning_2
+  m_Name: Day_1_Evening_Choice2b
   m_EditorClassIdentifier: 
   currentChoiceFile: {fileID: 0}
-  currentChoice: 'Who i am is not important.
-
-    But my name is Alex.
-
-    I hope
-    we can get to know each other even more over time.'
-  charName: You are chatting with "Alex"
+  currentChoice: "Aida:That is just my programing to make me feel more relatable.\r\nYou:I
+    guess that makes sense. \r\nAida:You should be going to bed soon, you have work
+    tomorrow."
+  charName: You are chatting with "Unknown"
   isChoice: 0
-  choiceOneName: What is your name?
+  choiceOneName: 
   choiceOne: {fileID: 0}
-  choiceTwoName: Who are you?
+  choiceTwoName: 
   choiceTwo: {fileID: 0}

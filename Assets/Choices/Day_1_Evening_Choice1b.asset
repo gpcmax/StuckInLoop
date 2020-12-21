@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67c820c9f567d9f43ab190cc1cf74d64, type: 3}
-  m_Name: Day_1_Evening_Choice2
+  m_Name: Day_1_Evening_Choice1b
   m_EditorClassIdentifier: 
   currentChoiceFile: {fileID: 0}
-  currentChoice: 'I am so sorry to hear that.
+  currentChoice: 'Aida:That is not good. I am sorry to hear that.
 
-    You should get some rest.
+    You:Do you
+    have emotions?
 
-    That
-    is the best thing to do after a long day of work.'
+    Aida:No silly i am an AI, i dont have feelings'
   charName: You are chatting with "Unknown"
   isChoice: 0
   choiceOneName: 

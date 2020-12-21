@@ -15,6 +15,12 @@ public class GameData : ScriptableObject
         Debug.Log("Something triggered a reset");
         currentScene = 0;
     }
+    public void resetData()
+    {
+        Debug.Log("Something triggered a reset");
+        currentScene = 0;
+        Day = 1;
+    }
 
     public void ChangeScene()
     {

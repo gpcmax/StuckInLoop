@@ -10,12 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67c820c9f567d9f43ab190cc1cf74d64, type: 3}
-  m_Name: Day_2_EveningTalk
+  m_Name: Day_4_Morning
   m_EditorClassIdentifier: 
   currentChoiceFile: {fileID: 0}
-  currentChoice: Aida:Welcome back. I bet you had a long day. you should head to
-    bed right away.
-  charName: You are chatting with "Alex"
+  currentChoice: 'Aida:Morning Ready to do it again?
+
+    You:What? What do you mean
+    again?
+
+    Aida:I mean what I mean, you should.
+
+    You:Aida?! what do you
+    mean?
+
+    Aida:You better get to work before you are late.'
+  charName: You are chatting with "Unknown"
   isChoice: 0
   choiceOneName: 
   choiceOne: {fileID: 0}

@@ -43,8 +43,8 @@ public class Dialouge : MonoBehaviour
     public TextMeshProUGUI currentTextBox;
     public bool textMsgEnabled;
 
-    public List<string> characterNames = new List<string>();
-    public List<string> sentancesWONames = new List<string>();
+    private List<string> characterNames = new List<string>();
+    private List<string> sentancesWONames = new List<string>();
 
     // Start is called before the first frame update
     private void Awake()

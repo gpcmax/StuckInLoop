@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: Day_1_EveningTalk
   m_EditorClassIdentifier: 
   currentChoiceFile: {fileID: 0}
-  currentChoice: 'Aida:Welcome back from work
-
-    Aida:How was your day?'
+  currentChoice: Aida:Welcome back, I hope your work day was good.
   charName: You are chatting with "Unknown"
   isChoice: 1
-  choiceOneName: It was good
+  choiceOneName: It went well.
   choiceOne: {fileID: 11400000, guid: e6a08542aad99d64c824180ee55f9322, type: 2}
-  choiceTwoName: Ugh I hate work!!
+  choiceTwoName: it was really boring.
   choiceTwo: {fileID: 11400000, guid: 79d82076b2a0a294b9371fc63759de7f, type: 2}

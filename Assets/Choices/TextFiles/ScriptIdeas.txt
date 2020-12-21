@@ -7,13 +7,14 @@ and talks to someone on the other end
 Alex is the AI name
 Artifical Language Expertmential Experiecnce 
 
-Day 1: Good morning!
-Welcome to your new computer.
-I am your Artifical Intelligence Domenstic Assitance or Aida for short.
-It is the start of your new job, you better hurry to work before you are late.
+Day 1: 
+Unknown:Good morning!
+Unknown:Welcome to your new computer.
+Aida:I am your Artifical Intelligence Domenstic Assitance or Aida for short.
+Aida:It is the start of your new job, you better hurry to work before you are late.
 
 Day 1: end of day
-Welcome back, I hope your work day was good.
+Aida:Welcome back, I hope your work day was good.
 Choice 1A: It went well.
 Aida: I am glad to hear that. 
 Player: do you have emotions?
@@ -97,3 +98,7 @@ Aida: Doesnt matter. You are stuck here. to repeat the same day for enternity.
 Player: Why do I have to repeat the day?! 
 Aida: That I can not tell you. I am only here to look over you.
 Aida: Now you should get ready for bed. You have work in the morning.
+Choice 5a:
+	Player agrees and the cycle continues
+choice 5b:
+	Player resist and leaves the building

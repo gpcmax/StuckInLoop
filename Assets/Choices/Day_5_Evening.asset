@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67c820c9f567d9f43ab190cc1cf74d64, type: 3}
+  m_Name: Day_5_Evening
+  m_EditorClassIdentifier: 
+  currentChoiceFile: {fileID: 0}
+  currentChoice: "You:Aida are you there?\r\nAida:I am here.\r\nYou:what is going
+    on? will you tell me?\r\nAida:Fine. It is true. you are stuck in a loop.\r\nYou:What?\r\nAida:You
+    will repeat the same day over and over forever. Never having a different day.\r\nYou:But
+    we talk each day and it is different?\r\nAida:This was not planned. but it seems
+    like these convos are outside of the timeloop.\r\nYou:That doesnt make sense?\r\nAida:Doesnt
+    matter. You are stuck here. to repeat the same day for enternity.\r\nYou:Why
+    do I have to repeat the day?! \r\nAida:That I can not tell you. I am only here
+    to look over you.\r\nAida:Now you should get ready for bed. You have work in
+    the morning."
+  charName: You are chatting with "Unknown"
+  isChoice: 0
+  choiceOneName: Agree to continue living life like this
+  choiceOne: {fileID: 0}
+  choiceTwoName: Resist and break the cycle
+  choiceTwo: {fileID: 0}

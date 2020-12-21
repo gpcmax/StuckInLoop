@@ -13,17 +13,15 @@ MonoBehaviour:
   m_Name: Day_2_Morning
   m_EditorClassIdentifier: 
   currentChoiceFile: {fileID: 0}
-  currentChoice: 'Morning!
+  currentChoice: 'Aida:Good morning!
 
-    Did you sleep well?
+    You:Morning.
 
-    Its another day!
-
-    Time
-    to go out and get that money!'
+    Aida:Its time to start
+    the new day. I will talk to you after work.'
   charName: You are chatting with "Unknown"
-  isChoice: 1
+  isChoice: 0
   choiceOneName: What is your name?
-  choiceOne: {fileID: 11400000, guid: 73845795f0938804186fc67d89566e5c, type: 2}
+  choiceOne: {fileID: 0}
   choiceTwoName: Who are you?
-  choiceTwo: {fileID: 11400000, guid: 7c2d265023df9304b811876cee73d909, type: 2}
+  choiceTwo: {fileID: 0}
