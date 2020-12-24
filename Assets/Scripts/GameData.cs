@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 [CreateAssetMenu(fileName = "GameData", menuName = "Data/New Game Data")]
 public class GameData : ScriptableObject
@@ -27,7 +28,7 @@ public class GameData : ScriptableObject
         currentScene++;
         //Debug.Log(Scenes[currentScene]);
         Debug.Log("Current Scene: " + currentScene);
-        if(currentScene >= Scenes.Length)
+        if (currentScene >= Scenes.Length)
         {
             Debug.Log("Scene Was Reset");
             currentScene = 0;

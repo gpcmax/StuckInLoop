@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 public class HouseController : MonoBehaviour
 {
@@ -57,7 +59,30 @@ public class HouseController : MonoBehaviour
     {
         if(TalkedOnPC)
         {
+            SaveGame();
             gameData.ChangeScene();
         }
+    }
+
+    public bool IsSaveFile()
+    {
+        return Directory.Exists(Application.persistentDataPath + "/game_save");
+    }
+
+    public void SaveGame()
+    {
+        if (!IsSaveFile())
+        {
+            Directory.CreateDirectory(Application.persistentDataPath + "/game_save");
+        }
+        if(!Directory.Exists(Application.persistentDataPath + "/game_save/data"))
+        {
+            Directory.CreateDirectory(Application.persistentDataPath + "/game_save/data");
+        }
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(Application.persistentDataPath + "/game_save/data/game_data");
+        var json = JsonUtility.ToJson(gameData);
+        bf.Serialize(file, json);
+        file.Close();
     }
 }

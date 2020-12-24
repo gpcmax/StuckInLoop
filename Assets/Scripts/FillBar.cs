@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class FillBar : MonoBehaviour
 {
     public Slider progressBar;
+    public float delay = 3f;
     public float speedOfBar;
     public CarSceneController controller;
 
@@ -42,7 +43,7 @@ public class FillBar : MonoBehaviour
 
     IEnumerator WaitFor()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(delay);
         startFilling = true;
     }
 

@@ -556,7 +556,10 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 1704489186}
   QTEs:
+  - {fileID: 7462764012742628599, guid: 4b512435ffd3c824c8794c64af6a6fe0, type: 3}
+  - {fileID: 7462764012742628599, guid: 1a409bd5b8e625240a3c844337e91f41, type: 3}
   - {fileID: 341703567941291607, guid: 157724492fe3b004bb0fc8a1374f127b, type: 3}
+  - {fileID: 8934917953944117017, guid: 368165f19131131449a845d94a9a1d0a, type: 3}
   - {fileID: 389084621339243470, guid: f0ce7e856522d624d96fb45fce75e6a9, type: 3}
   - {fileID: 3826246309664383690, guid: 11fe58e770158ee48b7015b196c70c13, type: 3}
   waitTime: 2
@@ -729,6 +732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressBar: {fileID: 1855417497}
+  delay: 3
   speedOfBar: 0.0005
   controller: {fileID: 0}
   startFilling: 0
@@ -1029,27 +1033,32 @@ PrefabInstance:
     - target: {fileID: 4227707958644119118, guid: 54a9f2bf49b912e4f9b070d1bdb6fbd2,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4227707958644119118, guid: 54a9f2bf49b912e4f9b070d1bdb6fbd2,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4227707958644119118, guid: 54a9f2bf49b912e4f9b070d1bdb6fbd2,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4227707958644119118, guid: 54a9f2bf49b912e4f9b070d1bdb6fbd2,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4227707958644119118, guid: 54a9f2bf49b912e4f9b070d1bdb6fbd2,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227707958644119118, guid: 54a9f2bf49b912e4f9b070d1bdb6fbd2,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 258
       objectReference: {fileID: 0}
     - target: {fileID: 4227707959105405317, guid: 54a9f2bf49b912e4f9b070d1bdb6fbd2,
         type: 3}
@@ -1105,6 +1114,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: 'Time: 10:00am'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227707959105405319, guid: 54a9f2bf49b912e4f9b070d1bdb6fbd2,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 258
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54a9f2bf49b912e4f9b070d1bdb6fbd2, type: 3}
