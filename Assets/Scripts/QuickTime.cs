@@ -11,7 +11,13 @@ public class QuickTime : MonoBehaviour
     public Image background;
     public Color passColor;
     private WorkSceneController sceneController;
+    private AudioSource audioSource;
 
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();    
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +32,7 @@ public class QuickTime : MonoBehaviour
         {
             background.color = passColor;
             sceneController.AddPoint();
+            audioSource.Play();
             Destroy(gameObject, 0.1f);
         }
     }

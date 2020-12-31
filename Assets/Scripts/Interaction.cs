@@ -9,6 +9,7 @@ public class Interaction : MonoBehaviour
     private bool isInTrigger;
     public HouseController controller;
     public KeyCode interactKey;
+    public GameObject interactButton;
 
     private void Update()
     {
@@ -23,7 +24,14 @@ public class Interaction : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            interactionButton.SetActive(true);
+            if (Application.platform == RuntimePlatform.Android)
+            {
+                interactButton.SetActive(true);
+            }
+            else
+            {
+                interactionButton.SetActive(true);
+            }
             isInTrigger = true;
             
         }
@@ -33,7 +41,14 @@ public class Interaction : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            interactionButton.SetActive(false);
+            if (Application.platform == RuntimePlatform.Android)
+            {
+                interactButton.SetActive(false);
+            }
+            else
+            {
+                interactionButton.SetActive(false);
+            }
             isInTrigger = false;
         }
     }

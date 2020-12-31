@@ -564,7 +564,7 @@ MonoBehaviour:
   - {fileID: 3826246309664383690, guid: 11fe58e770158ee48b7015b196c70c13, type: 3}
   waitTime: 2
   currentPoints: 0
-  requiredPoints: 10
+  requiredPoints: 25
   gameData: {fileID: 11400000, guid: 8a88f3c1f2eaa1048990dc16f54daf5a, type: 2}
   dayText: {fileID: 1752903226}
 --- !u!4 &976737881
