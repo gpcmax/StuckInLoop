@@ -15,6 +15,12 @@ public class PlayerController : MonoBehaviour
     public float maxHealth = 1f;
     private float currentHealth;
 
+    #region Mobile
+    public JoyStick joyStickMovement;
+    private Vector3 direction;
+
+    #endregion
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +35,7 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
             EndGame();
         }
-        if(!talking)
+        if (!talking)
         {
             moveInputX = Input.GetAxis("Horizontal");
             moveInputY = Input.GetAxis("Vertical");
