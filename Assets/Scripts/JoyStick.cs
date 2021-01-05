@@ -4,54 +4,48 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class JoyStick : MonoBehaviour,IDragHandler,IPointerUpHandler,IPointerDownHandler
+public class JoyStick : MonoBehaviour//,IDragHandler,IPointerUpHandler,IPointerDownHandler
 {
-    public Image joyContainer;
-    public Image joystick;
+    public Transform player;
+    public float speed = 1.5f;
+    private bool touchStart = false;
+    private Vector2 pointA;
+    private Vector2 pointB;
+    public Camera mainCamera;
 
-    public Vector3 InputDirection;
-
-    public void OnDrag(PointerEventData eventData)
+    private void Update()
     {
-        Vector2 position = Vector2.zero;
+        if(Application.platform == RuntimePlatform.Android)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                pointA = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
 
-        //to gegt input direction
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(joyContainer.rectTransform,
-            eventData.position,
-            eventData.pressEventCamera,
-            out position);
-
-        position.x = (position.x / joyContainer.rectTransform.sizeDelta.x);
-        position.y = (position.y / joyContainer.rectTransform.sizeDelta.y);
-
-        float x = (joyContainer.rectTransform.pivot.x == 1f) ? position.x * 2 + 1 : position.x * 2 - 1;
-        float y = (joyContainer.rectTransform.pivot.y == 1f) ? position.y * 2 + 1 : position.y * 2 - 1;
-
-        InputDirection = new Vector3(x, y, 0);
-        InputDirection = (InputDirection.magnitude > 1) ? InputDirection.normalized : InputDirection;
-
-        joystick.rectTransform.anchoredPosition = new Vector3(InputDirection.x * (joyContainer.rectTransform.sizeDelta.x / 3), InputDirection.y * (joyContainer.rectTransform.sizeDelta.y) / 3);
+            }
+            if (Input.GetMouseButton(0))
+            {
+                touchStart = true;
+                pointB = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
+            }
+            else
+            {
+                touchStart = false;
+            }
+        }
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    private void FixedUpdate()
     {
-        OnDrag(eventData);
+        if(touchStart)
+        {
+            Vector2 offset = pointB - pointA;
+            Vector2 direction = Vector2.ClampMagnitude(offset, 1.0f);
+            moveCharacter(direction);
+        }
     }
 
-    public void OnPointerUp(PointerEventData eventData)
+    void moveCharacter(Vector2 directiopn)
     {
-        InputDirection = Vector3.zero;
-        joystick.rectTransform.anchoredPosition = Vector3.zero;
-    }
-
-    void Start()
-    {
-        InputDirection = Vector3.zero;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        player.Translate(directiopn * speed * Time.deltaTime);
     }
 }
